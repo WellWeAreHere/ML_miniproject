@@ -1,22 +1,3 @@
-"""
-Problem 2 — Steady-state 2D heat conduction PINN
-
-PDE:
-    T_xx + T_yy + 1 = 0,  -1 < x < 1, -1 < y < 1
-Boundary:
-    T = 0 on the entire boundary.
-
-The paper uses 1500 residual points, 500 boundary points,
-4 hidden layers x 50 neurons, tanh, learning rate 0.0005,
-Glorot uniform initialization, and the same general training setup
-as Problem 1.
-
-A convenient analytical solution for this square problem is NOT used
-as the training target; the PINN is solving the PDE itself. The script
-therefore reports PDE and boundary residuals. A finite-difference
-reference is also generated for a visual error comparison.
-"""
-
 import argparse
 import numpy as np
 import torch
