@@ -1,26 +1,3 @@
-"""
-Problem 3 — Inverse problem for a damped single-degree-of-freedom oscillator
-
-ODE:
-    m*u_tt + c*u_t + k*u = 0
-Initial conditions:
-    u(0) = u0
-    u_t(0) = v0
-
-Paper setup:
-    m = 1, u0 = 1, v0 = 1
-    true c = 0.4, true k = 4
-    50 observation points
-    100 residual points
-    50 initial-condition points
-    3 hidden layers x 32 neurons
-    tanh, Glorot uniform, Adam lr=0.0005, 100000 epochs.
-
-The unknown c and k are trained together with the neural-network
-weights. We parameterize them as exp(log_c), exp(log_k) so they remain
-positive.
-"""
-
 import argparse
 import numpy as np
 import torch
